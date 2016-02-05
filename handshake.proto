@@ -1,5 +1,7 @@
 package dico;
 
+option java_package = "com.cherryworm.dico";
+option java_outer_classname = "Protos";
 
 message Handshake {
   optional string name = 1;
