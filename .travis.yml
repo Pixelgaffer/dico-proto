@@ -1,0 +1,21 @@
+language: go
+go:
+- 1.5.3
+env:
+  global:
+    secure: HGU6w/MgHH3kQoIKsaMl7Mc7dmVkU2YAeBMBBlpaQ/eZedgOgsvgM61i1Ch8gjfRdbAH8C0Q5bsSFrOA3VHHIcfqcuNwpkw5shv7toOZYh+t0NC88HQRlzujLg66L8Ib6D0Qzp5sLLFzT+oI1/8Ci0mdv9qUm9mHX1O/j7UkzkJt23unICrzbF0CzbjN4J1KPd/pgOkKwLZkpwobBsox99otFAz219srsuoEVkjuPp6uGPfSpTiiwR49Z9KanshADn4kW+89vb5fyQiuKYFbtz1BNsLBAXdF+ApaKsEm+nZ+5y/200/qjjznU2jjlhK50e71KXlecPwnyuMsRhcrvy7/gHO8lQcj8eVDCdQ7u8Zw1TNyDQ43R1qwIBefS+lQTPwOgq1GlXAEk4nH33lcPqu2moMnphx2870Ms7CBK3rV1rCbCRQu+/ZIMdbH5pL7DpUXMHMdWzwhSjZjOYlcYrytWXWFUexqXBrIi28UMmkKdw16LbIoeglJcfvoCzh/Lw+8TjJitLLYUhuwHkYPpL4c7Q+FvczXOUx82DizhTIpyGfXAYdwNUcMC/8SEtMod88Je9reR/wbEi0M0QO4qN7t769zq5dRHyLMEa4ZGXE+A2ga7CnCuZ9TfaHEjGbHSKf087jOWi8WbUcsMYREA1jp7K02GLIRo50nkUszXuM=
+install:
+- sudo apt-get update -qq
+- sudo apt-get install -y protobuf-compiler
+- go get github.com/golang/protobuf/protoc-gen-go
+before_script:
+- git config --global user.email "Mrmaxmeier@gmail.com"
+- git config --global user.name "Mrmaxmeier"
+- git config --global push.default simple
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+script:
+- git fetch origin go:go
+- update_protos.sh
+- git checkout go
+- git push --set-upstream origin go

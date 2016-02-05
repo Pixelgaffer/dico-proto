@@ -9,7 +9,6 @@ protoc --go_out=. --proto_path=$TMPDIR $TMPDIR/*.proto
 echo "commiting code"
 git add *.pb.go
 git commit -m "sync: $LATEST_COMMIT_MSG"
-git push
 git checkout master
 echo "deleting $TMPDIR"
-#rm -rf $TMPDIR
+rm -rf $TMPDIR
