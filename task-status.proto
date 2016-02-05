@@ -7,4 +7,5 @@ message TaskStatus {
 	required bool finished = 3;
 	required bool failed = 4;
 	optional int64 runtime = 5; // Unix time
+	optional string worker = 6;
 }
