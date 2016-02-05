@@ -1,0 +1,10 @@
+package dico;
+
+
+message Handshake {
+  optional string name = 1;
+  optional bool runs_tasks = 2 [default=false];
+  optional bool manages_tasks = 3 [default=false];
+  optional bool recieves_stats = 4 [default=false];
+  optional bool recieves_results = 5 [default=false];
+}
