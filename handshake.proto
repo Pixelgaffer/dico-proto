@@ -1,5 +1,5 @@
 syntax = "proto2";
-package dico-protos;
+package dicoprotos;
 
 option java_package = "com.cherryworm.dico";
 option java_outer_classname = "Protos";

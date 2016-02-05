@@ -1,8 +1,11 @@
 syntax = "proto2";
-package dico-protos;
+package dicoprotos;
 
+// worker -> daemon -> manager
 message TaskResult {
 	required int64 id = 1;
 	required bytes data = 2;
 	optional string options = 3;
+	optional string job_type = 4;
+	// TODO: task_group
 }

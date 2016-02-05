@@ -1,7 +1,9 @@
 syntax = "proto2";
-package dico-protos;
+package dicoprotos;
 
+// daemon -> worker
 message DoTask {
 	required int64 id = 1;
 	required string options = 2;
+	required string job_type = 3;
 }

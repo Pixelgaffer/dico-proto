@@ -1,11 +1,19 @@
 syntax = "proto2";
-package dico-protos;
+package dicoprotos;
 
+// daemon -> manager
 message TaskStatus {
 	required int64 id = 1;
 	required string options = 2;
-	required bool finished = 3;
-	required bool failed = 4;
-	optional int64 runtime = 5; // Unix time
-	optional string worker = 6;
+	enum TaskStatusUpdate {
+		REGISTERED = 0;
+		STARTED = 1;
+		FINISHED = 2;
+		FAILED = 3;
+	}
+	required TaskStatusUpdate type = 3;
+	optional int64 runtime = 4; // Unix time
+	optional int64 worker_id = 5;
+	optional int64 task_group = 6;
+	optional int64 retries = 7 [default=0];
 }
