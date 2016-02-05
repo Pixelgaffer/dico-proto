@@ -1,5 +1,5 @@
 syntax = "proto2";
-package dico;
+package dico-protos;
 
 message TaskStatus {
 	required int64 id = 1;
