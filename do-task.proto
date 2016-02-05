@@ -1,0 +1,7 @@
+syntax = "proto3";
+package dico;
+
+message DoTask {
+	required int64 id = 1;
+	required string options = 2;
+}

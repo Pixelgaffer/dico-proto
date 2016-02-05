@@ -1,3 +1,4 @@
+syntax = "proto3";
 package dico;
 
 option java_package = "com.cherryworm.dico";

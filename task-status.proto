@@ -1,0 +1,10 @@
+syntax = "proto3";
+package dico;
+
+message TaskStatus {
+	required int64 id = 1;
+	required string options = 2;
+	required bool finished = 3;
+	required bool failed = 4;
+	optional int64 runtime = 5; // Unix time
+}
