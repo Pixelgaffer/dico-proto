@@ -24,7 +24,7 @@ type TaskResult struct {
 func (m *TaskResult) Reset()                    { *m = TaskResult{} }
 func (m *TaskResult) String() string            { return proto.CompactTextString(m) }
 func (*TaskResult) ProtoMessage()               {}
-func (*TaskResult) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{0} }
+func (*TaskResult) Descriptor() ([]byte, []int) { return fileDescriptor4, []int{0} }
 
 func (m *TaskResult) GetId() int64 {
 	if m != nil && m.Id != nil {
@@ -58,7 +58,7 @@ func init() {
 	proto.RegisterType((*TaskResult)(nil), "dicoprotos.TaskResult")
 }
 
-var fileDescriptor3 = []byte{
+var fileDescriptor4 = []byte{
 	// 119 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0xe2, 0x12, 0x2c, 0x49, 0x2c, 0xce,
 	0xd6, 0x2d, 0x4a, 0x2d, 0x2e, 0xcd, 0x29, 0xd1, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0xe2, 0x4a,

@@ -52,7 +52,7 @@ func (x *TaskStatus_TaskStatusUpdate) UnmarshalJSON(data []byte) error {
 	return nil
 }
 func (TaskStatus_TaskStatusUpdate) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor4, []int{0, 0}
+	return fileDescriptor5, []int{0, 0}
 }
 
 type TaskStatus struct {
@@ -69,7 +69,7 @@ type TaskStatus struct {
 func (m *TaskStatus) Reset()                    { *m = TaskStatus{} }
 func (m *TaskStatus) String() string            { return proto.CompactTextString(m) }
 func (*TaskStatus) ProtoMessage()               {}
-func (*TaskStatus) Descriptor() ([]byte, []int) { return fileDescriptor4, []int{0} }
+func (*TaskStatus) Descriptor() ([]byte, []int) { return fileDescriptor5, []int{0} }
 
 const Default_TaskStatus_Retries int64 = 0
 
@@ -127,7 +127,7 @@ func init() {
 	proto.RegisterEnum("dicoprotos.TaskStatus_TaskStatusUpdate", TaskStatus_TaskStatusUpdate_name, TaskStatus_TaskStatusUpdate_value)
 }
 
-var fileDescriptor4 = []byte{
+var fileDescriptor5 = []byte{
 	// 230 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x64, 0x8e, 0x41, 0x4b, 0x03, 0x31,
 	0x10, 0x85, 0x4d, 0xb6, 0x36, 0x76, 0x94, 0xda, 0xe6, 0x94, 0x63, 0xe9, 0x45, 0x2f, 0x2e, 0x22,
