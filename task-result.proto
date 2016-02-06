@@ -1,6 +1,9 @@
 syntax = "proto2";
 package dicoprotos;
 
+option java_package = "com.cherryworm.dico.protos";
+option java_outer_classname = "TaskResultProto";
+
 // worker -> daemon -> manager
 message TaskResult {
 	required int64 id = 1;

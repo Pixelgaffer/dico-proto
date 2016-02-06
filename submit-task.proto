@@ -1,6 +1,9 @@
 syntax = "proto2";
 package dicoprotos;
 
+option java_package = "com.cherryworm.dico.protos";
+option java_outer_classname = "SubmitTaskProto";
+
 // manager -> daemon
 message SubmitTask {
 	required bool multi = 1 [default = true];
