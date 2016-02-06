@@ -1,0 +1,14 @@
+syntax = "proto2";
+package dicoprotos;
+
+message SelfDescribingMessage {
+    enum MessageType {
+        DO_TASK = 1;
+        TASK_STATUS = 2;
+        TASK_RESULT = 3;
+        SUBMIT_TASK = 4;
+        HANDSHAKE = 5;
+    }
+    required MessageType type = 1;
+    required bytes data = 2;
+}
