@@ -1,0 +1,8 @@
+syntax = "proto2";
+package dicoprotos;
+
+// manager -> daemon -> worker
+message SubmitCode {
+	required string hash = 1;
+	required bytes archive = 2;
+}
