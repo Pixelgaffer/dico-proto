@@ -3,7 +3,6 @@ package dicoprotos
 import (
 	"bytes"
 	"encoding/binary"
-	"fmt"
 	"io"
 	"net"
 
@@ -22,6 +21,8 @@ func GetMessageType(m proto.Message) SelfDescribingMessage_MessageType {
 		return SelfDescribingMessage_TASK_RESULT
 	case *SubmitTask:
 		return SelfDescribingMessage_SUBMIT_TASK
+	case *SubmitCode:
+		return SelfDescribingMessage_SUBMIT_CODE
 	}
 	panic("invalid msg type")
 }
@@ -38,6 +39,8 @@ func GetSDMMessageType(msg *SelfDescribingMessage) proto.Message {
 		return new(TaskResult)
 	case SelfDescribingMessage_SUBMIT_TASK:
 		return new(SubmitTask)
+	case SelfDescribingMessage_SUBMIT_CODE:
+		return new(SubmitCode)
 	}
 	panic("invalid msg type")
 }
@@ -80,7 +83,7 @@ func ReadPacket(conn net.Conn) (packet []byte, err error) {
 	}
 	headerBuffer := buffer.Next(4)
 	length := binary.BigEndian.Uint32(headerBuffer)
-	fmt.Println("decoded packet length", length, int(length))
+	//fmt.Println("decoded packet length", length, int(length))
 
 	err = cpyMin(int(length))
 	if err != nil {

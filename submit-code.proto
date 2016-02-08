@@ -3,6 +3,7 @@ package dicoprotos;
 
 // manager -> daemon -> worker
 message SubmitCode {
-	required string hash = 1;
+	required string job_type = 1;
 	required bytes archive = 2;
+	optional string hash = 3;
 }
