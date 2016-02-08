@@ -16,7 +16,7 @@ message TaskStatus {
 	required TaskStatusUpdate type = 2;
 	required string options = 3;
 	optional int64 runtime = 4; // Unix time
-	optional int64 worker_id = 5;
-	optional int64 task_group = 6;
+	optional string worker = 5;
+	optional string task_group = 6;
 	optional int64 retries = 7 [default=0];
 }

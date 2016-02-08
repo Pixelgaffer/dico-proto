@@ -9,5 +9,4 @@ message SubmitTask {
 	required bool multi = 1 [default = true];
 	required string options = 2;
 	required string job_type = 3;
-	// TODO: task_group
 }

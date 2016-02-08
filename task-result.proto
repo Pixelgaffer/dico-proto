@@ -10,5 +10,6 @@ message TaskResult {
 	required bytes data = 2;
 	optional string options = 3;
 	optional string job_type = 4;
+	optional string task_group = 5;
 	// TODO: task_group
 }
