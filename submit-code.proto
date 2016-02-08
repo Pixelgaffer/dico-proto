@@ -1,6 +1,9 @@
 syntax = "proto2";
 package dicoprotos;
 
+option java_package = "com.cherryworm.dico.protos";
+option java_outer_classname = "SubmitCodeProto";
+
 // manager -> daemon -> worker
 message SubmitCode {
 	required string job_type = 1;

@@ -11,7 +11,9 @@ message SelfDescribingMessage {
         TASK_RESULT = 3;
         SUBMIT_TASK = 4;
         HANDSHAKE = 5;
-	SUBMIT_CODE = 6;
+	      SUBMIT_CODE = 6;
+        WORKER_STATUS = 7;
+        JOB_CLASS_CREATED = 8;
     }
     required MessageType type = 1;
     required bytes data = 2;
