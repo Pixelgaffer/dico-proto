@@ -1,0 +1,10 @@
+syntax = "proto2";
+package dicoprotos;
+
+option java_package = "com.cherryworm.dico.protos";
+option java_outer_classname = "JobClassCreatedProto";
+
+// worker -> manager
+message JobClassCreated {
+	required string name = 1;
+}

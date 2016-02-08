@@ -1,0 +1,15 @@
+syntax = "proto2";
+package dicoprotos;
+
+option java_package = "com.cherryworm.dico.protos";
+option java_outer_classname = "WorkerStatusProto";
+
+// worker -> manager
+message WorkerStatus {
+	required string id = 1;
+	enum WorkerStatusUpdate {
+		CONNECTED = 0;
+		DISCONNECTED = 1;
+	}
+	required WorkerStatusUpdate update = 2;
+}
