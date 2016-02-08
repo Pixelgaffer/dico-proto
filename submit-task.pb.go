@@ -23,7 +23,7 @@ type SubmitTask struct {
 func (m *SubmitTask) Reset()                    { *m = SubmitTask{} }
 func (m *SubmitTask) String() string            { return proto.CompactTextString(m) }
 func (*SubmitTask) ProtoMessage()               {}
-func (*SubmitTask) Descriptor() ([]byte, []int) { return fileDescriptor4, []int{0} }
+func (*SubmitTask) Descriptor() ([]byte, []int) { return fileDescriptor5, []int{0} }
 
 const Default_SubmitTask_Multi bool = true
 
@@ -52,7 +52,7 @@ func init() {
 	proto.RegisterType((*SubmitTask)(nil), "dicoprotos.SubmitTask")
 }
 
-var fileDescriptor4 = []byte{
+var fileDescriptor5 = []byte{
 	// 146 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0xe2, 0x12, 0x2c, 0x2e, 0x4d, 0xca,
 	0xcd, 0x2c, 0xd1, 0x2d, 0x49, 0x2c, 0xce, 0xd6, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0xe2, 0x4a,

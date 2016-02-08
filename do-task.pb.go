@@ -8,20 +8,24 @@ Package dicoprotos is a generated protocol buffer package.
 It is generated from these files:
 	do-task.proto
 	handshake.proto
+	job-class-created.proto
 	self-describing-message.proto
 	submit-code.proto
 	submit-task.proto
 	task-result.proto
 	task-status.proto
+	worker-status.proto
 
 It has these top-level messages:
 	DoTask
 	Handshake
+	JobClassCreated
 	SelfDescribingMessage
 	SubmitCode
 	SubmitTask
 	TaskResult
 	TaskStatus
+	WorkerStatus
 */
 package dicoprotos
 
